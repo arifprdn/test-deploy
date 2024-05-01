@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 
 const routes = require('./routes');
 app.use('/api/v1', routes);
-app.get('/');
+app.get('/', (req, res) => res.render('image'));
 
 // 500 error handler
 app.use((err, req, res, next) => {
